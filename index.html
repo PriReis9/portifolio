@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Nome</h1>
+            <p>Desenvolvedor Web | Designer | Sua Especialidade</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="sobre" class="container">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-content">
+            <img src="assets/images/profile.jpg" alt="Minha Foto" class="profile-img">
+            <p>Olá! Eu sou [Seu Nome], um apaixonado por [sua área]. Tenho experiência em [listar brevemente suas principais habilidades]. Adoro resolver problemas e criar soluções criativas e eficientes.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="container">
+        <h2>Meus Projetos</h2>
+        <div class="projetos-grid">
+            <!-- Exemplo de projeto -->
+            <div class="projeto-card">
+                <img src="assets/images/projects/projeto1.jpg" alt="Projeto 1">
+                <h3>Nome do Projeto</h3>
+                <p>Descrição breve do projeto e tecnologias utilizadas.</p>
+                <a href="#" class="btn">Ver Projeto</a>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+    </section>
+
+    <section id="habilidades" class="container">
+        <h2>Habilidades</h2>
+        <div class="habilidades-list">
+            <div class="habilidade">
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="habilidade">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="habilidade">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <!-- Adicione mais habilidades conforme necessário -->
+        </div>
+    </section>
+
+    <section id="contato" class="container">
+        <h2>Contato</h2>
+        <form id="form-contato">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <!-- Adicione mais redes sociais conforme necessário -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Meu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
