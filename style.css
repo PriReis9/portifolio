@@ -1,4 +1,4 @@
- {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #FF7F50; /* Coral */
-    --secondary-color: #FFD700; /* Amarelo */
-    --light-color: #FFF8DC; /* Amarelo claro (fundo) */
-    --dark-color: #333;
-    --success-color: #32CD32; /* Verde lima para contrastar */
+    --primary-color: #800020; /* Bordô principal */
+    --secondary-color: #5E1914; /* Bordô mais escuro */
+    --light-color: #F8F1F0; /* Fundo rosado claro */
+    --dark-color: #2C1A1D; /* Preto com tonalidade bordô */
+    --accent-color: #C28E8E; /* Coral suave para detalhes */
 }
 
 body {
     line-height: 1.6;
-    color: #333;
-    background-color: var(--light-color); /* Fundo amarelo claro */
+    color: var(--dark-color);
+    background-color: var(--light-color);
 }
 
 .container {
@@ -28,81 +28,102 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: var(--primary-color); /* Coral */
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 4rem 0;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
 /* Navegação */
 nav {
-    background-color: var(--secondary-color); /* Amarelo */
+    background-color: var(--secondary-color);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 nav ul li a {
-    color: #333; /* Texto escuro para contrastar com o amarelo */
-    text-decoration: none;
-    padding: 1rem 1.5rem;
-    display: block;
-    transition: background-color 0.3s;
+    color: white;
+    transition: all 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Seções */
 h2 {
-    color: var(--primary-color); /* Coral para títulos */
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-/* Cards de Projetos */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* Cards */
 .projeto-card {
     background: white;
-    border: 1px solid var(--secondary-color); /* Borda amarela */
+    border: 1px solid var(--accent-color);
+    transition: all 0.3s;
+}
+
+.projeto-card:hover {
+    box-shadow: 0 10px 20px rgba(128, 0, 32, 0.1);
 }
 
 .projeto-card h3 {
-    color: var(--primary-color); /* Coral */
+    color: var(--secondary-color);
 }
 
 /* Habilidades */
+.habilidade {
+    background: white;
+    border: 1px solid var(--accent-color);
+}
+
 .habilidade i {
-    color: var(--primary-color); /* Coral para ícones */
+    color: var(--primary-color);
 }
 
 /* Botões */
 .btn {
-    background: var(--primary-color); /* Coral */
+    background: var(--primary-color);
+    letter-spacing: 1px;
 }
 
 .btn:hover {
-    background: #FF6347; /* Coral mais escuro */
+    background: var(--secondary-color);
+}
+
+/* Formulário */
+input, textarea {
+    border: 1px solid var(--accent-color);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(128, 0, 32, 0.2);
 }
 
 /* Rodapé */
 footer {
-    background: var(--primary-color); /* Coral */
+    background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
     color: white;
 }
 
-/* Links sociais */
-.social-links a {
-    color: var(--primary-color); /* Coral */
-}
-
-.social-links a:hover {
-    color: #FF6347; /* Coral escuro */
+/* Efeitos extras */
+.profile-img {
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 5px 15px rgba(94, 25, 20, 0.2);
